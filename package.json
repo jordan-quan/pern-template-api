@@ -1,0 +1,41 @@
+{
+  "name": "pern-template-api",
+  "version": "1.0.0",
+  "description": "API for PERN app",
+  "author": "Jordan Quan",
+  "engines": {
+    "node": "12.8.0",
+    "npm": "6.14.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^10.0.0",
+    "@commitlint/config-conventional": "^10.0.0",
+    "babel-eslint": "10.0.2",
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-import-resolver-webpack": "^0.10.0",
+    "eslint-loader": "^2.1.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-mocha": "^7.0.1",
+    "eslint-plugin-react": "^7.21.4",
+    "husky": "^4.3.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm run test:local",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "scripts": {
+    "lint": "eslint ./app/src/**/*.js --fix-dry-run",
+    "test": "cd app && npm run test",
+    "test:local": "cd app && npm run test",
+    "start": "cd app && npm run start",
+    "start:dev": "cd app && npm run start"
+  },
+  "dependencies": {
+    "csv-parser": "^2.3.3",
+    "formidable": "^1.2.2"
+  }
+}
