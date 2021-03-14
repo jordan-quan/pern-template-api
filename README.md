@@ -1,6 +1,6 @@
-# Nutrition Label API (Nutrition App B/E)
+# PERN Template API (PERN App B/E)
 
-Back-end for Nutrition App
+Back-end for PERN Template
 
 ## Installation and Setup
 
