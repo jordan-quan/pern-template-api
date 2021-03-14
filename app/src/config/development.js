@@ -3,7 +3,10 @@ const {
   PGDATABASE,
   PGHOST,
   PGUSER,
-  PGPASSWORD
+  PGPASSWORD,
+  OAUTH_CLIENT_ID,
+  OAUTH_CLIENT_SECRET,
+  OAUTH_CALLBACK_URL
 } = process.env
 
 export default {
@@ -28,7 +31,7 @@ export default {
   REDIS_TTL: 10,
 
   // OAuth
-  OAUTH_CLIENT_ID: '621563373373-gfp53td2o2cu5e8vufe2nmcnlg30l8mn.apps.googleusercontent.com',
-  OAUTH_CLIENT_SECRET: 'Fij9PCZhAJqx1Y3LaDMnRIH5',
-  OAUTH_CALLBACK_URL: 'http://localhost:8000/login/callback'
+  OAUTH_CLIENT_ID,
+  OAUTH_CLIENT_SECRET,
+  OAUTH_CALLBACK_URL: `http://localhost:8000/${OAUTH_CALLBACK_URL}`
 }
